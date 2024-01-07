@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes-first
-  namespace: team-a  
+  name: hello-kubernetes-tenant-a
+  namespace: tenant-a
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-kubernetes-first
+      app: hello-kubernetes-tenant-a
   template:
     metadata:
       labels:
-        app: hello-kubernetes-first
+        app: hello-kubernetes-tenant-a
     spec:
       containers:
       - name: hello-kubernetes
